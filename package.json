@@ -1,0 +1,25 @@
+{
+  "name": "url-shortener-server",
+  "version": "1.0.0",
+  "description": "long url shortener",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "url-shortener-server"
+  },
+  "author": "Patrick Iyiakimo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "joi": "^17.13.3",
+    "mongoose": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
