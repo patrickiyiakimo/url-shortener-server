@@ -2,7 +2,7 @@
   "name": "url-shortener-server",
   "version": "1.0.0",
   "description": "long url shortener",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon index.js"
   },
@@ -15,9 +15,11 @@
   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "joi": "^17.13.3",
-    "mongoose": "^8.5.1"
+    "mongoose": "^8.5.1",
+    "shortid": "^2.2.16"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"
