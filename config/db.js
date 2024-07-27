@@ -1,27 +1,25 @@
-DATABASE_URL =
-  "mongodb+srv://url-shortener:FYaK0pcMzA7rPlS1@cluster0.asxdhsp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 const mongoose = require("mongoose");
-const mongoData = process.env.DATABASE_URL;
-mongoose.connect(mongoData);
-const database = mongoose.connection;
 
-database.on("error", (error) => {
-  console.log(error);
-});
 
-database.once("connected", () => {
-  console.log("Database is connected");
-});
+const db = async () => {
+  try {
+    const mongoData = process.env.DATABASE_URL;
+    mongoose.connect(mongoData);
+    const database = mongoose.connection;
 
-const app = express();
+    database.on("error", (error) => {
+      console.log(error);
+    });
 
-module.exports = db;
+    database.once("connected", () => {
+      console.log("Database is connected");
+    });
 
-// const mongoose = require("mongoose");
+  } catch (error) {
+    console.error(error.message)
+    
+  }
+}
 
-// const connection = mongoose.createConnection(
-//   "mongodb+srv://iyiakimopatrick2002:E8SDVX08JdHBYreX@cluster0.asxdhsp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-// );
-
-// module.exports = connection;
+module.exports = db
