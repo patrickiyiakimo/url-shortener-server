@@ -17,7 +17,6 @@
 //   }
 // });
 
-
 // router.post("/userLogin", async (req, res) => {
 //   try {
 //     const { email, password } = req.body;
@@ -33,8 +32,6 @@
 // });
 
 // module.exports = router;
-
-
 
 // const express = require("express");
 // const router = express.Router();
@@ -104,12 +101,6 @@
 
 // module.exports = router;
 
-
-
-
-
-
-
 const express = require("express");
 const bcrypt = require("bcrypt");
 const User = require("../models/user.model");
@@ -171,7 +162,3 @@ router.post("/userLogin", async (req, res) => {
 });
 
 module.exports = router;
-
-
-
-
