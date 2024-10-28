@@ -34,12 +34,13 @@ router.get("/:url", async (req, res) => {
 });
 
 router.post("/getUserUrl", async (req, res) => {
-  const { userId } = req.body;
-    const allUserUrl = await urlSubmitModel.find({ userId });
+  const { email } = req.body;
+    const allUserUrl = await urlSubmitModel.find({ email });
     if (allUserUrl) {
         res.status(200).send(allUserUrl)
     } else {
         res.status(400).send("no data found")
     }
 });
+
 module.exports = router;

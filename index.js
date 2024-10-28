@@ -10,8 +10,8 @@ app.get("/", (req, res) => {
 const server = async () => {
   try {
     await db();
-    app.listen(8000, () => {
-      console.log("server is running on port 8000");
+    app.listen(5000, () => {
+      console.log("server is running on port 5000");
     });
   } catch (error) {
     console.error(error.message);
